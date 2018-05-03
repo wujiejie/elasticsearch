@@ -38,6 +38,9 @@ public class GeoHashGridTests extends BaseAggregationTestCase<GeoGridAggregation
                 case GEOHASH:
                     precision = randomIntBetween(1, 12);
                     break;
+                case QUADKEY:
+                    precision = randomIntBetween(0, 26);
+                    break;
                 default:
                     throw new IllegalArgumentException(
                         "GeoHashType." + factory.type().name() + " was not added to the test");
